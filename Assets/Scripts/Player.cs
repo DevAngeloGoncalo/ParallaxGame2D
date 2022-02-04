@@ -8,8 +8,10 @@ public class Player : MonoBehaviour
     private Animator anim;
 
     public float speed, jumpForce;
-
     public bool isJumping, doubleJump;
+
+    public GameObject bulletFire;
+    public Transform firePoint;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class Player : MonoBehaviour
     {
         Move();
         Jump();
+        Shoot();
     }
 
     void Move()
@@ -34,14 +37,14 @@ public class Player : MonoBehaviour
         {
             anim.SetBool("run", true);
             transform.eulerAngles = new Vector3(0F, 0F, 0F);
-            
+
         }
 
         if (Input.GetAxis("Horizontal") < 0F)
         {
             anim.SetBool("run", true);
             transform.eulerAngles = new Vector3(0F, 180F, 0F); //Rotacionar caso esteja olhando para esquerda AG20220203
-            
+
         }
 
         if (Input.GetAxis("Horizontal") == 0F)
@@ -72,6 +75,14 @@ public class Player : MonoBehaviour
 
             //}
 
+        }
+    }
+
+    void Shoot()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(bulletFire, firePoint.position, firePoint.rotation);
         }
     }
 
