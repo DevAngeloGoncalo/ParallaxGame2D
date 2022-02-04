@@ -32,20 +32,20 @@ public class Player : MonoBehaviour
 
         if (Input.GetAxis("Horizontal") > 0F)
         {
-            anim.SetBool("walk", true);
+            anim.SetBool("run", true);
 
             transform.eulerAngles = new Vector3(0F, 0F, 0F);
         }
 
         if (Input.GetAxis("Horizontal") < 0F)
         {
-            anim.SetBool("walk", true);
+            anim.SetBool("run", true);
             transform.eulerAngles = new Vector3(0F, 180F, 0F); //Rotacionar caso esteja olhando para esquerda AG20220203
         }
 
         if (Input.GetAxis("Horizontal") == 0F)
         {
-            anim.SetBool("walk", false);
+            anim.SetBool("run", false);
         }
 
     }
@@ -57,19 +57,19 @@ public class Player : MonoBehaviour
             if (!isJumping)
             {
                 rig.AddForce(new Vector2(0F, jumpForce), ForceMode2D.Impulse);
-                doubleJump = true;
+                //doubleJump = true;
                 anim.SetBool("jump", true);
             }
-            else
-            {
-                if (doubleJump)
-                {
-                    rig.AddForce(new Vector2(0F, jumpForce), ForceMode2D.Impulse);
-                    doubleJump = false;
+            //else
+            //{
+            //    if (doubleJump)
+            //    {
+            //        rig.AddForce(new Vector2(0F, jumpForce), ForceMode2D.Impulse);
+            //        doubleJump = false;
 
-                }
+            //    }
 
-            }
+            //}
 
         }
     }
