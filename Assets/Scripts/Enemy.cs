@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
         Physics2D.IgnoreLayerCollision(7, 3);
         Physics2D.IgnoreLayerCollision(7, 7);
         Physics2D.IgnoreLayerCollision(7, 9);
+        Physics2D.IgnoreLayerCollision(7, 10);
     }
 
     // Update is called once per frame

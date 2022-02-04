@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private Rigidbody2D rig;
+    public Rigidbody2D rig;
     private Animator anim;
 
     private float shotCounter;
     private bool canFire;
 
-    public float speed, jumpForce, timeBetweenShoots;
-    public bool isJumping;
+    public float speed, jumpForce, timeBetweenShoots, delay = 0F;
+    public bool isJumping, bFlagDeath;
 
     public GameObject bulletFire;
     public Transform firePoint;
@@ -26,9 +26,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        Jump();
-        Shoot();
+        if (!bFlagDeath)
+        {
+            Move();
+            Jump();
+            Shoot();
+        }
     }
 
     void Move()
@@ -103,9 +106,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (collision.gameObject.layer == 8)
+        if (other.gameObject.layer == 8)
         {
             isJumping = false;
             anim.SetBool("jump", false);
@@ -119,5 +122,13 @@ public class Player : MonoBehaviour
             isJumping = true;
         }
 
+    }
+
+    public void KillPlayer(bool hit)
+    {
+        
+        bFlagDeath = true;
+        anim.Play("Hurt");
+        Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
     }
 }

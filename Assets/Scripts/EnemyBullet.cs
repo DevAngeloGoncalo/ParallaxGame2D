@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
-
     public float speed = 7F;
-    public int bulletPower = 100;
+    private bool hit;
     public Rigidbody2D rig;
 
     // Start is called before the first frame update
@@ -14,7 +13,9 @@ public class Bullet : MonoBehaviour
     {
         rig = GetComponent<Rigidbody2D>();
 
-        Physics2D.IgnoreLayerCollision(6, 6);
+        Physics2D.IgnoreLayerCollision(10, 10);
+        Physics2D.IgnoreLayerCollision(10, 9);
+        Physics2D.IgnoreLayerCollision(10, 7);
     }
 
     // Update is called once per frame
@@ -25,17 +26,26 @@ public class Bullet : MonoBehaviour
 
     void Move()
     {
-        rig.velocity = transform.right * speed;
+        if (!hit)
+        {
+            rig.velocity = -transform.right * speed;
+        }
+        else
+        {
+            rig.velocity = Vector2.zero;
+        }
+        
     }
 
     //Destroy the object when collide
     private void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(gameObject);
+        hit = true;
 
-        if (other.tag == "Enemy")
+        if (other.tag == "Player")
         {
-            other.GetComponent<Enemy>().DamageEnemy(bulletPower);
+            other.GetComponent<Player>().KillPlayer(hit);
         }
     }
 }
