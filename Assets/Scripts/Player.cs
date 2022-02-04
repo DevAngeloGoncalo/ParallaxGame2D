@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     private bool canFire;
 
     public float speed, jumpForce, timeBetweenShoots;
-    public bool isJumping, doubleJump;
+    public bool isJumping;
 
     public GameObject bulletFire;
     public Transform firePoint;
@@ -64,20 +64,8 @@ public class Player : MonoBehaviour
             if (!isJumping)
             {
                 rig.AddForce(new Vector2(0F, jumpForce), ForceMode2D.Impulse);
-                //doubleJump = true;
                 anim.SetBool("jump", true);
             }
-            //else
-            //{
-            //    if (doubleJump)
-            //    {
-            //        rig.AddForce(new Vector2(0F, jumpForce), ForceMode2D.Impulse);
-            //        doubleJump = false;
-
-            //    }
-
-            //}
-
         }
     }
 
@@ -93,11 +81,10 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             if (canFire == true)
-            {
+            {  
                 Instantiate(bulletFire, firePoint.position, firePoint.rotation);
                 shotCounter = Time.time;
                 canFire = false;
-                
             }
         }
 
@@ -107,10 +94,11 @@ public class Player : MonoBehaviour
             //Contador de Disparos por frame
             if (canFire == true)
             {
+                
                 Instantiate(bulletFire, firePoint.position, firePoint.rotation);
+                
                 shotCounter = Time.time;
                 canFire = false;
-     
             }
         }
     }
