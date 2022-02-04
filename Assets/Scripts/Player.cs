@@ -7,7 +7,10 @@ public class Player : MonoBehaviour
     private Rigidbody2D rig;
     private Animator anim;
 
-    public float speed, jumpForce;
+    private float shotCounter;
+    private bool canFire;
+
+    public float speed, jumpForce, timeBetweenShoots;
     public bool isJumping, doubleJump;
 
     public GameObject bulletFire;
@@ -80,9 +83,35 @@ public class Player : MonoBehaviour
 
     void Shoot()
     {
+
+        if (Time.time - shotCounter > timeBetweenShoots)
+        {
+            canFire = true;
+        }
+
+        //Clicar e Atirar --- Mouse1 = 0, Scroll = 1, mouse2 = 2;
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(bulletFire, firePoint.position, firePoint.rotation);
+            if (canFire == true)
+            {
+                Instantiate(bulletFire, firePoint.position, firePoint.rotation);
+                shotCounter = Time.time;
+                canFire = false;
+                
+            }
+        }
+
+        //Atirar e segurar
+        if (Input.GetMouseButton(0))
+        {
+            //Contador de Disparos por frame
+            if (canFire == true)
+            {
+                Instantiate(bulletFire, firePoint.position, firePoint.rotation);
+                shotCounter = Time.time;
+                canFire = false;
+     
+            }
         }
     }
 
