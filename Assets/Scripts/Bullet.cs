@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
 
     public float speed = 7F;
+    public int bulletPower = 100;
     public Rigidbody2D rig;
 
     // Start is called before the first frame update
@@ -24,5 +25,10 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(gameObject);
+
+        if (other.tag == "Enemy")
+        {
+            other.GetComponent<Enemy>().DamageEnemy(bulletPower);
+        } 
     }
 }
