@@ -19,6 +19,8 @@ public class Enemy : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
+        Physics2D.IgnoreLayerCollision(7, 3);
+        Physics2D.IgnoreLayerCollision(7, 7);
         Physics2D.IgnoreLayerCollision(7, 9);
     }
 
@@ -30,6 +32,7 @@ public class Enemy : MonoBehaviour
 
     void Move()
     {
+        
         if (!bFlagDeath)
         {
             rig.velocity = -transform.right * speed;

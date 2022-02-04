@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8522950354309900458
+--- !u!1 &1225550351721180398
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8522950354309900469}
-  - component: {fileID: 8522950354309900465}
-  - component: {fileID: 8522950354309900470}
-  - component: {fileID: 8522950354309900471}
-  - component: {fileID: 8522950354309900468}
-  - component: {fileID: 1221014282873800074}
+  - component: {fileID: 1225550351721180401}
+  - component: {fileID: 1225550351721180405}
+  - component: {fileID: 1225550351721180402}
+  - component: {fileID: 1225550351721180403}
+  - component: {fileID: 1225550351721180400}
+  - component: {fileID: 8625650820861608398}
   m_Layer: 7
-  m_Name: enemy_character_1
+  m_Name: enemy_character_2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8522950354309900469
+--- !u!4 &1225550351721180401
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8522950354309900458}
+  m_GameObject: {fileID: 1225550351721180398}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.87, y: -3.4, z: 503.18527}
-  m_LocalScale: {x: 5.1716, y: 5.1716, z: 5.1716}
+  m_LocalPosition: {x: 15.88, y: -0.87, z: 503.18527}
+  m_LocalScale: {x: 11.060501, y: 11.060501, z: 11.060501}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8522950354309900465
+--- !u!212 &1225550351721180405
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8522950354309900458}
+  m_GameObject: {fileID: 1225550351721180398}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -86,13 +86,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8522950354309900470
+--- !u!61 &1225550351721180402
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8522950354309900458}
+  m_GameObject: {fileID: 1225550351721180398}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -112,29 +112,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.58}
   m_EdgeRadius: 0
---- !u!114 &8522950354309900471
+--- !u!114 &1225550351721180403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8522950354309900458}
+  m_GameObject: {fileID: 1225550351721180398}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2457610e6c2926b42826d7f9af0a52a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 4
   delay: 0
-  health: 100
---- !u!50 &8522950354309900468
+  health: 500
+--- !u!50 &1225550351721180400
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8522950354309900458}
+  m_GameObject: {fileID: 1225550351721180398}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -148,14 +148,14 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!95 &1221014282873800074
+--- !u!95 &8625650820861608398
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8522950354309900458}
+  m_GameObject: {fileID: 1225550351721180398}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3fda645a789811343a9b42fd7b3062da, type: 2}
