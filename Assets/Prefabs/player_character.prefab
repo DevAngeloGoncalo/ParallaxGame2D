@@ -146,9 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 232d23c50a99bfb46951a6bc430cb267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   jumpForce: 12
-  timeBetweenShoots: 0.5
+  timeBetweenShoots: 0.4
   isJumping: 0
   bulletFire: {fileID: 2936213830544838864, guid: f2986ced69904994a831aa88fbf72b12, type: 3}
   firePoint: {fileID: 7817667925516737932}
