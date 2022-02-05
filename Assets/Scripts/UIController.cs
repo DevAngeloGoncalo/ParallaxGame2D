@@ -5,8 +5,17 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    public static UIController instance;
+
     public static int scorePoints = 0; //Static para ser acessada na classe Enemy
     public Text textScore;
+
+    public GameObject deathScreen;
+
+    private void Awake() 
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()

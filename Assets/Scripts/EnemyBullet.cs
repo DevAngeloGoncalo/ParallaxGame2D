@@ -45,7 +45,7 @@ public class EnemyBullet : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            other.GetComponent<Player>().KillPlayer(hit);
+            other.GetComponent<Player>().KillPlayer(hit);;
         }
     }
 }

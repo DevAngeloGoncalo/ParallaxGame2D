@@ -74,7 +74,6 @@ public class Player : MonoBehaviour
 
     void Shoot()
     {
-
         if (Time.time - shotCounter > timeBetweenShoots)
         {
             canFire = true;
@@ -130,5 +129,8 @@ public class Player : MonoBehaviour
         bFlagDeath = true;
         anim.Play("Hurt");
         Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
+
+
+        UIController.instance.deathScreen.SetActive(true);
     }
 }
