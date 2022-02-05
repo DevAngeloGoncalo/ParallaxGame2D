@@ -12,7 +12,7 @@ public class UIController : MonoBehaviour
 
     public GameObject deathScreen;
 
-    private void Awake() 
+    private void Awake() //necessary to active objects in other classes
     {
         instance = this;
     }

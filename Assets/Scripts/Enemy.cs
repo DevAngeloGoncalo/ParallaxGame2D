@@ -44,6 +44,8 @@ public class Enemy : MonoBehaviour
         {
             rig.velocity = Vector3.zero;
         }
+
+
     }
 
     public void DamageEnemy(int damage)
@@ -57,6 +59,14 @@ public class Enemy : MonoBehaviour
             bFlagDeath = true;
             anim.Play("death");
             Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.layer == 11)
+        {
+            Destroy(gameObject);
         }
     }
 }

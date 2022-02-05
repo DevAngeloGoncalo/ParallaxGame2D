@@ -22,14 +22,17 @@ public class EnemySpawner : MonoBehaviour
         
         int randomEnemy;
 
-        if (Time.time > nextSpawn)
+        if (!UIController.instance.deathScreen.activeSelf)
         {
-            randomEnemy = Random.Range(0, enemies.Length);
+            if (Time.time > nextSpawn)
+            {
+                randomEnemy = Random.Range(0, enemies.Length);
 
-            nextSpawn = Time.time + spawnRate;
-            float fRandomRange = Random.Range(12.4F, 28f);
-            Vector2 spawnPoint = new Vector2(fRandomRange, transform.position.y);
-            Instantiate(enemies[randomEnemy], spawnPoint, Quaternion.identity);
+                nextSpawn = Time.time + spawnRate;
+                float fRandomRange = Random.Range(12.4F, 28f);
+                Vector2 spawnPoint = new Vector2(fRandomRange, transform.position.y);
+                Instantiate(enemies[randomEnemy], spawnPoint, Quaternion.identity);
+            }
         }
     }
 }
