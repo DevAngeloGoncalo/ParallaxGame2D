@@ -1176,6 +1176,7 @@ GameObject:
   - component: {fileID: 1293083286}
   - component: {fileID: 1293083285}
   - component: {fileID: 1293083284}
+  - component: {fileID: 1293083291}
   m_Layer: 5
   m_Name: Death Text
   m_TagString: Untagged
@@ -1319,6 +1320,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293083282}
   m_CullTransparentMesh: 1
+--- !u!95 &1293083291
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293083282}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0dfc1c386ee2ce845afeab7d218c9b69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1395218667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1427,7 +1447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1882,6 +1902,7 @@ GameObject:
   - component: {fileID: 1881500018}
   - component: {fileID: 1881500020}
   - component: {fileID: 1881500019}
+  - component: {fileID: 1881500021}
   m_Layer: 5
   m_Name: TextScore
   m_TagString: Untagged
@@ -1950,6 +1971,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881500017}
   m_CullTransparentMesh: 1
+--- !u!95 &1881500021
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881500017}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f3b4d8d84cd945d4b9f05b40724a4d4a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2146225263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,3 +2107,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textScore: {fileID: 1881500019}
   deathScreen: {fileID: 1510448405}
+  fadeScreen: {fileID: 1510448407}
