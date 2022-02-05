@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     
     private Rigidbody2D rig;
     private Animator anim;
+    private BoxCollider2D collider;
 
     private bool bFlagDeath;
 
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        collider = GetComponent<BoxCollider2D>();
 
         Physics2D.IgnoreLayerCollision(7, 3);
         Physics2D.IgnoreLayerCollision(7, 7);
@@ -50,9 +52,16 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
+            collider.enabled = false;
+            UIController.scorePoints += 1;
             bFlagDeath = true;
             anim.Play("death");
             Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
+
+            //if (this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("death"))
+            //{
+            //    UIController.scorePoints += 1;
+            //}
         }
     }
 }
