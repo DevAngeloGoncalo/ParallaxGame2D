@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
         Physics2D.IgnoreLayerCollision(7, 7);
         Physics2D.IgnoreLayerCollision(7, 9);
         Physics2D.IgnoreLayerCollision(7, 10);
+        //Physics2D.IgnoreLayerCollision(7, 12);
     }
 
     // Update is called once per frame
@@ -66,6 +67,14 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.layer == 11)
         {
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.layer == 12)
+        {
+            if (!UIController.instance.deathScreen.activeSelf)
+            {
+                UIController.instance.deathScreen.SetActive(true);                
+            }
             Destroy(gameObject);
         }
     }

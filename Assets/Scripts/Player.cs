@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UIController.scorePoints = 0;
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -28,9 +29,12 @@ public class Player : MonoBehaviour
     {
         if (!bFlagDeath)
         {
-            Move();
-            Jump();
-            Shoot();
+            if (!UIController.instance.deathScreen.activeSelf)
+            {
+                Move();
+                Jump();
+                Shoot();
+            }
         }
     }
 
@@ -130,7 +134,9 @@ public class Player : MonoBehaviour
         anim.Play("Hurt");
         Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
 
-
-        UIController.instance.deathScreen.SetActive(true);
+        if (!UIController.instance.deathScreen.activeSelf)
+        {
+            UIController.instance.deathScreen.SetActive(true);
+        }    
     }
 }
