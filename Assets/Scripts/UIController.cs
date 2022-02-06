@@ -11,7 +11,10 @@ public class UIController : MonoBehaviour
 
     public Text textScore;
     public GameObject deathScreen;
-    public string newGameScene, mainMenuScen;
+    public GameObject pauseMenu;
+    public string newGameScene, mainMenuScene;
+
+    private bool paused;
 
     private void Awake() //necessary to active objects in other classes
     {
@@ -27,7 +30,12 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textScore.text = "Score: " + scorePoints.ToString("00000");   
+        textScore.text = "Score: " + scorePoints.ToString("00000");  
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
+        }
     }
 
     public void NewGame()
@@ -37,6 +45,34 @@ public class UIController : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        SceneManager.LoadScene(mainMenuScen);
+        SceneManager.LoadScene(mainMenuScene);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void PauseGame()
+    {
+        if (!UIController.instance.deathScreen.activeSelf)
+        {
+            if (!paused)
+            {
+                pauseMenu.SetActive(true);
+
+                paused = true;
+
+                Time.timeScale = 0F;
+            }
+            else
+            {
+                pauseMenu.SetActive(false);
+
+                paused = false;
+
+                Time.timeScale = 1F;
+            }
+        }
     }
 }

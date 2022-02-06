@@ -21,6 +21,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene(gameScene);
     }
 
