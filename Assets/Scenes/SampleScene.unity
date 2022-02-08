@@ -1071,11 +1071,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6013337452573027348, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
       propertyPath: spawnRate
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6013337452573027349, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6013337452573027349, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1426,9 +1426,9 @@ Transform:
   m_LocalPosition: {x: -1.8391011, y: -1.0935255, z: -557.0751}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 488040090}
   - {fileID: 1691113665}
   - {fileID: 878182902}
-  - {fileID: 488040090}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1725,9 +1725,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1037090920}
     m_Modifications:
+    - target: {fileID: 6013337452573027348, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
+      propertyPath: spawnRate
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013337452573027348, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
+      propertyPath: enemies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013337452573027348, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 8425785468635050244, guid: 69947ec58d84c154db61187c1ab87d71, type: 3}
+    - target: {fileID: 6013337452573027348, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8522950354309900458, guid: 9b2f22c25088de642a31af4bd77ca6f7, type: 3}
+    - target: {fileID: 6013337452573027348, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
+      propertyPath: enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 7863025699640072806, guid: 4b411e9573a48b542ad0f0df3bfede9d, type: 3}
+    - target: {fileID: 6013337452573027348, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
+      propertyPath: enemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 1225550351721180398, guid: b0b1f25d77d88f8409405f65adf31ed2, type: 3}
     - target: {fileID: 6013337452573027349, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6013337452573027349, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2129,9 +2153,25 @@ PrefabInstance:
       propertyPath: spawnRate
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6013337452573027348, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
+      propertyPath: enemies.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013337452573027348, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8425785468635050244, guid: 69947ec58d84c154db61187c1ab87d71, type: 3}
+    - target: {fileID: 6013337452573027348, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
+      propertyPath: enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 1225550351721180398, guid: b0b1f25d77d88f8409405f65adf31ed2, type: 3}
+    - target: {fileID: 6013337452573027348, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
+      propertyPath: enemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 8522950354309900458, guid: 9b2f22c25088de642a31af4bd77ca6f7, type: 3}
     - target: {fileID: 6013337452573027349, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6013337452573027349, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
       propertyPath: m_LocalPosition.x
