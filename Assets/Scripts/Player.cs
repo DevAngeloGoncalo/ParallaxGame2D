@@ -84,8 +84,8 @@ public class Player : MonoBehaviour
             canFire = true;
         }
 
-        //Clicar e Atirar --- Mouse1 = 0, Scroll = 1, mouse2 = 2;
-        if (Input.GetMouseButtonDown(0))
+        //Clicar e Atirar --- Mouse1 = 0, Scroll = 1, mouse2 = 2; Return = EnterKey
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return))
         {
             if (canFire == true)
             {  
@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
         }
 
         //Atirar e segurar
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) || Input.GetKey(KeyCode.Return))
         {
             //Contador de Disparos por frame
             if (canFire == true)
