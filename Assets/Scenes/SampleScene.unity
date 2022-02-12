@@ -1071,7 +1071,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6013337452573027348, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
       propertyPath: spawnRate
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6013337452573027349, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
       propertyPath: m_RootOrder
@@ -1727,7 +1727,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6013337452573027348, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
       propertyPath: spawnRate
-      value: 1.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6013337452573027348, guid: 58f972fbeb080284ea1265c9d9053ab0, type: 3}
       propertyPath: enemies.Array.size
