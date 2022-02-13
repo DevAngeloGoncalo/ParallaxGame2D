@@ -1,6 +1,6 @@
 # ParallaxGame2D
 
-Parallax Game é um jogo onde o personagem deve evitar que os obstáculos passem por ele, caso o ultrapasse, será fim de jogo, o jogo também termina se o jogador for atingidido por algum projétil inimigo.
+Parallax Game é um jogo onde o personagem deve evitar que os obstáculos passem por ele, caso o ultrapasse, será fim de jogo, o jogo também termina se o jogador for atingidido por algum projétil inimigo. O objetivo do jogador é derrotar o máximo de inimigos que conseguir e assim, bater os seus recordes.
 
 O jogo possui os seguintes diferenciais:
 
