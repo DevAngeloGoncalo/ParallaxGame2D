@@ -1,5 +1,10 @@
 # ParallaxGame2D
 
+<div>
+ <img src="https://media.giphy.com/media/fMPfkl8cg8yoGDjMGx/giphy.gif" width="480" height="270" />
+ <img src="https://media3.giphy.com/media/JGgYYODQYSXrQ0t0Xw/giphy.gif" width="480" height="270" />
+
+ ##
 Parallax Game é um jogo onde o personagem deve evitar que os obstáculos passem por ele, caso o ultrapasse, será fim de jogo, o jogo também termina se o jogador for atingidido por algum projétil inimigo. O objetivo do jogador é derrotar o máximo de inimigos que conseguir e assim, bater os seus recordes.
 
 O jogo possui os seguintes diferenciais:
@@ -25,6 +30,5 @@ Além do desafio de não deixar os inimigos ultrapassarem até a esquerda da tel
 
 As artes dos sprites dos modelos do cenário e personagens foram utilizados da assetStore;
 
-<img src="https://media.giphy.com/media/fMPfkl8cg8yoGDjMGx/giphy.gif" width="480" height="270" />
-<img src="https://media3.giphy.com/media/JGgYYODQYSXrQ0t0Xw/giphy.gif" width="480" height="270" />
+
 
