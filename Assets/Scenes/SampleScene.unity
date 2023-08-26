@@ -533,7 +533,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 70a7f84c0ae334453a44a60563463702, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.605
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1390,6 +1390,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resume text
       objectReference: {fileID: 0}
+    - target: {fileID: 6942958520849006859, guid: dddb8543b55baba488c92e15ad764e40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 216.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942958520849006859, guid: dddb8543b55baba488c92e15ad764e40, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00026417
+      objectReference: {fileID: 0}
     - target: {fileID: 6942958520865500177, guid: dddb8543b55baba488c92e15ad764e40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1804,6 +1812,14 @@ PrefabInstance:
     - target: {fileID: 4028981762715949524, guid: 4eecc826f918acc459118f1b44ee2538, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028981763988482818, guid: 4eecc826f918acc459118f1b44ee2538, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 228.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028981763988482818, guid: 4eecc826f918acc459118f1b44ee2538, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00027275
       objectReference: {fileID: 0}
     - target: {fileID: 4028981763988482819, guid: 4eecc826f918acc459118f1b44ee2538, type: 3}
       propertyPath: m_Name
@@ -2840,6 +2856,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4028981763988482818, guid: 4eecc826f918acc459118f1b44ee2538, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 228.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028981763988482818, guid: 4eecc826f918acc459118f1b44ee2538, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00027275
+      objectReference: {fileID: 0}
     - target: {fileID: 4028981763988482819, guid: 4eecc826f918acc459118f1b44ee2538, type: 3}
       propertyPath: m_Name
       value: Menu text
@@ -2857,6 +2881,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1510448406}
     m_Modifications:
+    - target: {fileID: 6942958520849006859, guid: dddb8543b55baba488c92e15ad764e40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 216.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942958520849006859, guid: dddb8543b55baba488c92e15ad764e40, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00026417
+      objectReference: {fileID: 0}
     - target: {fileID: 6942958520865500177, guid: dddb8543b55baba488c92e15ad764e40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
